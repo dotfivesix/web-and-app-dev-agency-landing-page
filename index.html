@@ -4,10 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/svg+xml" href="./images/logo.svg">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Web and App Development Agency</title>
 </head>
-<body>
-    
+<body class="font-poppins bg-dark text-light">
+    <main>
+        <header class="sticky flex justify-center">
+            <nav class="container flex justify-between items-center p-6 relative">
+                <div class="text-xl cursor-pointer">
+                    Logo
+                </div>
+                <ul class="hidden lg:flex gap-12">
+                    <li><a href="#" class="relative before:absolute before:w-full before:h-[2px] before:bg-orange before:-bottom-2 hover:text-neutral-400">Home</a></li>
+                    <li><a href="#" class="hover:text-neutral-400">Design Methadology</a></li>
+                    <li><a href="#" class="hover:text-neutral-400">Our Services</a></li>
+                    <li><a href="#" class="hover:text-neutral-400">Our Work</a></li>
+                </ul>
+                <button href="#" class="hidden lg:flex border border-light py-2 px-4 hover:border-orange hover:text-neutral-300">Book an appointment</button>
+                <button class="text-xl lg:hidden" onclick="ToggleNav()">
+                    <i class="fa fa-close hidden" id="nav-btn-close"></i>
+                    <i class="fa fa-bars" id="nav-btn-bars"></i>
+                </button>
+                <div class="hidden absolute right-6 top-20 p-6 bg-dark-secondary lg:hidden" id="nav-dropdown">
+                    <ul class="flex flex-col gap-4 mb-4">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Design Methadology</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Our Work</a></li>
+                    </ul>
+                    <button href="#" class="border border-light p-2">Book an appointment</button>
+                </div>
+            </nav>
+        </header>
+        <section></section>
+    </main>
+    <footer></footer>
+    <script src="./script.js"></script>
 </body>
 </html>
