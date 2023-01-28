@@ -5,6 +5,7 @@ const sidebarProgress = document.getElementById("sidebar-progress");
 const sidebar = document.getElementById("sidebar");
 const mapsDiv = document.getElementById("maps-div");
 const goBottomAnchor = document.getElementById("go-bottom-anchor");
+const goUpAnchor = document.getElementById("go-up-anchor");
 
 const sections = [
     "hero",
@@ -48,8 +49,17 @@ function onVisible(element, callback) {
 onVisible(document.getElementById("footer-section"), () => {
     sidebar.classList.add("opacity-0");
     sidebar.classList.remove("opacity-100");
-    goBottomButton.classList.add("opacity-0");
-    goBottomButton.classList.remove("opacity-100");
+    goBottomAnchor.classList.add("opacity-0");
+    goBottomAnchor.classList.remove("opacity-100");
+});
+
+onVisible(document.getElementById("hero-ctx"), () => {
+    goUpAnchor.classList.add("opacity-0");
+    goUpAnchor.classList.remove("opacity-100");
+});
+onVisible(document.getElementById("design-methodology-ctx"), () => {
+    goUpAnchor.classList.add("opacity-100");
+    goUpAnchor.classList.remove("opacity-0");
 });
 
 sections.forEach((section, index) => {
@@ -68,8 +78,8 @@ sections.forEach((section, index) => {
         {
             sidebar.classList.add("opacity-100");
             sidebar.classList.remove("opacity-0");
-            goBottomButton.classList.add("opacity-100");
-            goBottomButton.classList.remove("opacity-0");
+            goBottomAnchor.classList.add("opacity-100");
+            goBottomAnchor.classList.remove("opacity-0");
         }
 
         if (currentSection != section)
@@ -82,4 +92,10 @@ sections.forEach((section, index) => {
         sidebarProgress.children[index].classList.remove("opacity-50");
         sidebarProgress.children[index].classList.add("opacity-100");
     });
+});
+
+$("#go-bottom-anchor,#go-up-anchor").on("click", function (e) {
+    e.preventDefault();
+    const href = $(this).attr("href");
+    $("html, body").animate({ scrollTop: $(href).offset().top }, 400);
 });
