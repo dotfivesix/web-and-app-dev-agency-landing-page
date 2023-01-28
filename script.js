@@ -2,7 +2,9 @@ const btnClose = document.getElementById("nav-btn-close");
 const btnBars = document.getElementById("nav-btn-bars");
 const navDropDown = document.getElementById("nav-dropdown");
 const sidebarProgress = document.getElementById("sidebar-progress");
+const sidebar = document.getElementById("sidebar");
 const mapsDiv = document.getElementById("maps-div");
+const goBottomAnchor = document.getElementById("go-bottom-anchor");
 
 const sections = [
     "hero",
@@ -43,14 +45,39 @@ function onVisible(element, callback) {
     }).observe(element);
 }
 
+onVisible(document.getElementById("footer-section"), () => {
+    sidebar.classList.add("opacity-0");
+    sidebar.classList.remove("opacity-100");
+    goBottomButton.classList.add("opacity-0");
+    goBottomButton.classList.remove("opacity-100");
+});
+
 sections.forEach((section, index) => {
-    onVisible(document.getElementById(`${section}-ctx`), () => {
+    const ctxElem = document.getElementById(`${section}-ctx`);
+    onVisible(ctxElem, () => {
+
+        if (ctxElem.classList.contains("opacity-0"))
+        {
+            ctxElem.classList.add("opacity-100");
+            ctxElem.classList.remove("opacity-0");
+            ctxElem.classList.add("translate-y-0");
+            ctxElem.classList.remove("translate-y-10");
+        }
+
+        if (sidebar.classList.contains("opacity-0"))
+        {
+            sidebar.classList.add("opacity-100");
+            sidebar.classList.remove("opacity-0");
+            goBottomButton.classList.add("opacity-100");
+            goBottomButton.classList.remove("opacity-0");
+        }
+
         if (currentSection != section)
         {
-            console.log(currentSection);
             sidebarProgress.children[sections.indexOf(currentSection)].classList.remove("opacity-100");
             sidebarProgress.children[sections.indexOf(currentSection)].classList.add("opacity-50");
             currentSection = section;
+            goBottomAnchor.setAttribute("href", `#${sections[sections.indexOf(currentSection) + 1]}`);
         }
         sidebarProgress.children[index].classList.remove("opacity-50");
         sidebarProgress.children[index].classList.add("opacity-100");

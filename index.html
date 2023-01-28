@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Web and App Development Agency</title>
 </head>
-<body class="font-poppins bg-dark text-light">
+<body class="font-poppins bg-dark text-light scroll-smooth">
     <main>
-        <div class="hidden fixed left-6 lg:flex items-center h-screen">
+        <div id="sidebar" class="hidden fixed left-6 lg:flex items-center h-screen transition-all duration-300 opacity-100">
             <ul class="flex flex-col gap-3" id="sidebar-progress">
                 <li class="w-[3px] h-12 bg-light opacity-100"></li>
                 <li class="w-[3px] h-12 bg-light opacity-50"></li>
@@ -25,12 +25,12 @@
                 <li class="w-[3px] h-12 bg-light opacity-50"></li>
             </ul>
         </div>
-        <div class="hidden lg:flex fixed z-10 top-[50%] right-6">
-            <button class="hover:brightness-50">
+        <div class="hidden lg:flex fixed z-10 top-[50%] right-6 transition-all duration-300 opacity-100">
+            <a id="go-bottom-anchor" class="hover:brightness-50" href="#design-methodology">
                 <img src="./images/go-bottom-icon.svg" alt="" class="w-5">
-            </button>
+            </a>
         </div>
-        <div class="hidden lg:hidden fixed z-10 bottom-6 right-6">
+        <div class="hidden lg:hidden fixed z-10 bottom-6 right-6 transition-all duration-300 opacity-100">
             <button class="hover:brightness-125">
                 <img src="./images/go-up-icon.svg" alt="" class="w-10">
             </button>
@@ -62,7 +62,7 @@
                 </div>
             </nav>
         </header>
-        <div>
+        <div class="transition-all duration-300">
             <!-- Hero Section -->
             <section id="hero" class="pt-20 w-full flex justify-center relative overflow-hidden">
 
@@ -75,7 +75,7 @@
                 <!-- Content -->
                 <div class="container p-6 h-[calc(100vh-10rem)] flex justify-center items-center">
 
-                    <div id="hero-ctx" class="flex flex-col sm:gap-2 md:gap-4 text-4xl font-medium sm:text-5xl md:text-6xl lg:text-7xl">
+                    <div id="hero-ctx" class="flex flex-col sm:gap-2 md:gap-4 text-4xl font-medium sm:text-5xl md:text-6xl lg:text-7xl transform-all duration-1000 relative opacity-0 translate-y-10">
                         <div>
                             <span class="selection:text-orange selection:bg-dark-secondary">web</span>
                             <span class="text-orange select-none">⌫</span>
@@ -107,7 +107,7 @@
 
                 <div class="container p-6 min-h-[calc(100vh-10rem)] h-full flex justify-center items-center">
 
-                    <div id="design-methodology-ctx" class="text-center flex flex-col items-center gap-3">
+                    <div id="design-methodology-ctx" class="text-center flex flex-col items-center gap-3 transform-all duration-1000 relative opacity-0 translate-y-10">
                         <h2 class="text-4xl text-white font-medium md:text-5xl">Design Methodology</h2>
                         <p class="tracking-widest max-w-3xl font-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
                         <div class="mt-20 flex flex-col xl:flex-row flex-wrap justify-center gap-6">
@@ -165,7 +165,7 @@
                 <div class="absolute z-0 top-32 w-28 right-[45%]"><img src="./images/ellipse-2.svg"></div>
 
                 <div class="container p-6 min-h-[calc(100vh-10rem)] h-full flex justify-center items-center flex-col gap-10 xl:flex-row lg:justify-between px-16">
-                    <div id="app-services-ctx" class="relative flex flex-col gap-3 text-center xl:text-start lg:gap-6">
+                    <div id="app-services-ctx" class="relative flex flex-col gap-3 text-center xl:text-start lg:gap-6 transform-all duration-1000 relative opacity-0 translate-y-10">
                         <div class="text-green text-5xl absolute -top-8 right-0">✦</div>
                         <h2 class="text-4xl text-white font-medium md:text-5xl xl:text-6xl">App Services</h2>
                         <p class="tracking-widest max-w-3xl font-light xl:max-w-xl lg:text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
@@ -219,7 +219,7 @@
                 <div class="absolute z-0 top-32 w-28 right-[45%]"><img src="./images/ellipse-2.svg"></div>
 
                 <div class="container p-6 min-h-[calc(100vh-10rem)] h-full flex justify-center items-center flex-col gap-10 xl:flex-row lg:justify-between px-16">
-                    <div id="app-name-ctx" class="relative flex flex-col gap-3 lg:gap-6 text-center xl:text-start">
+                    <div id="app-name-ctx" class="relative flex flex-col gap-3 lg:gap-6 text-center xl:text-start transform-all duration-1000 relative opacity-0 translate-y-10">
                         <div class="text-green text-5xl absolute -top-8 right-0">✦</div>
                         <h2 class="text-4xl text-white font-medium md:text-5xl xl:text-6xl">App Name</h2>
                         <p class="tracking-widest max-w-3xl font-light xl:max-w-xl lg:text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
@@ -247,7 +247,7 @@
                 <div class="absolute z-0 top-32 w-28 right-[45%]"><img src="./images/ellipse-2.svg"></div>
 
                 <div class="container p-6 min-h-[calc(100vh-10rem)] h-full flex justify-center items-center flex-col gap-10 xl:flex-row-reverse lg:justify-between px-16">
-                    <div id="web-services-ctx" class="relative flex flex-col gap-3 text-center xl:text-start lg:gap-6">
+                    <div id="web-services-ctx" class="relative flex flex-col gap-3 text-center xl:text-start lg:gap-6 transform-all duration-1000 relative opacity-0 translate-y-10">
                         <div class="text-pink text-5xl absolute -top-8 right-0 lg:text-7xl">✦</div>
                         <h2 class="text-4xl text-white font-medium md:text-5xl xl:text-6xl">Web Services</h2>
                         <p class="tracking-widest max-w-3xl font-light xl:max-w-xl lg:text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
@@ -301,7 +301,7 @@
                 <div class="absolute z-0 top-32 w-28 right-[45%]"><img src="./images/ellipse-2.svg"></div>
 
                 <div class="container p-6 min-h-[calc(100vh-10rem)] h-full flex justify-center items-center flex-col gap-10 xl:flex-row lg:justify-between px-16">
-                    <div id="web-name-ctx" class="relative flex flex-col gap-3 lg:gap-6 text-center xl:text-start">
+                    <div id="web-name-ctx" class="relative flex flex-col gap-3 lg:gap-6 text-center xl:text-start transform-all duration-1000 relative opacity-0 translate-y-10">
                         <div class="text-pink text-5xl absolute bottom-8 right-0 lg:text-7xl">✦</div>
                         <h2 class="text-4xl text-white font-medium md:text-5xl xl:text-6xl">Web Name</h2>
                         <p class="tracking-widest max-w-3xl font-light xl:max-w-xl lg:text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
@@ -324,7 +324,7 @@
                 <div class="absolute z-0 top-32 w-28 right-[45%]"><img src="./images/ellipse-2.svg"></div>
 
                 <div class="container p-6 min-h-[calc(100vh-10rem)] h-full flex justify-center items-center flex-col gap-10 xl:flex-row lg:justify-between px-16">
-                    <div id="book-appointment-ctx" class="relative flex flex-col gap-3 lg:gap-6 text-center xl:text-start">
+                    <div id="book-appointment-ctx" class="relative flex flex-col gap-3 lg:gap-6 text-center xl:text-start transform-all duration-1000 relative opacity-0 translate-y-10">
                         <div class="text-pink text-5xl absolute bottom-0 right-0 lg:text-7xl">✦</div>
                         <h2 class="text-4xl text-white font-medium md:text-5xl xl:text-6xl">Book An Appointment</h2>
                         <p class="tracking-widest max-w-3xl font-light xl:max-w-xl lg:text-lg">Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -379,9 +379,9 @@
         </div>
     </main>
 
-    <footer>
+    <footer id="footer-section">
         <!-- Maps -->
-        <div class="relative" id="maps-div">
+        <div class="relative">
             <div class="absolute w-full h-28 bg-gradient-to-t from-dark to-transparent bottom-0"></div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14031.959774923221!2d-96.837356!3d32.958427!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xceb9a9ec1f9d92c7!2sFoodWars+Restaurant!5e0!3m2!1sen!2sus!4v1533532448672" frameborder="0" class="border border-solid border-black w-full h-[66vh]"></iframe>
         </div>
