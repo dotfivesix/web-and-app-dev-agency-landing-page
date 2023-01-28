@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/svg+xml" href="./images/logo.svg">
     <link rel="stylesheet" href="./styles.css">
@@ -14,14 +14,34 @@
 </head>
 <body class="font-poppins bg-dark text-light">
     <main>
-        <header class="sticky flex justify-center">
+        <div class="hidden fixed left-6 md:flex items-center h-screen">
+            <ul class="flex flex-col gap-3">
+                <li class="w-[3px] h-12 bg-light opacity-100"></li>
+                <li class="w-[3px] h-12 bg-light opacity-50"></li>
+                <li class="w-[3px] h-12 bg-light opacity-50"></li>
+                <li class="w-[3px] h-12 bg-light opacity-50"></li>
+                <li class="w-[3px] h-12 bg-light opacity-50"></li>
+                <li class="w-[3px] h-12 bg-light opacity-50"></li>
+            </ul>
+        </div>
+        <div class="hidden md:flex fixed z-10 top-[50%] right-6">
+            <button class="hover:brightness-50">
+                <img src="./images/go-bottom-icon.svg" alt="" class="w-5">
+            </button>
+        </div>
+        <div class="hidden md:hidden fixed z-10 bottom-6 right-6">
+            <button class="hover:brightness-125">
+                <img src="./images/go-up-icon.svg" alt="" class="w-10">
+            </button>
+        </div>
+        <header class="fixed z-10 top-0 w-full flex justify-center bg-[rgba(16,17,26,0.75)]">
             <nav class="container flex justify-between items-center p-6 relative">
                 <div class="text-xl cursor-pointer">
                     Logo
                 </div>
-                <ul class="hidden lg:flex gap-12">
+                <ul class="hidden lg:flex gap-12 justify-center">
                     <li><a href="#" class="relative before:absolute before:w-full before:h-[2px] before:bg-orange before:-bottom-2 hover:text-neutral-400">Home</a></li>
-                    <li><a href="#" class="hover:text-neutral-400">Design Methadology</a></li>
+                    <li><a href="#" class="hover:text-neutral-400">Design Methodology</a></li>
                     <li><a href="#" class="hover:text-neutral-400">Our Services</a></li>
                     <li><a href="#" class="hover:text-neutral-400">Our Work</a></li>
                 </ul>
@@ -33,7 +53,7 @@
                 <div class="hidden absolute right-6 top-20 p-6 bg-dark-secondary lg:hidden" id="nav-dropdown">
                     <ul class="flex flex-col gap-4 mb-4">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Design Methadology</a></li>
+                        <li><a href="#">Design Methodology</a></li>
                         <li><a href="#">Our Services</a></li>
                         <li><a href="#">Our Work</a></li>
                     </ul>
@@ -41,7 +61,105 @@
                 </div>
             </nav>
         </header>
-        <section></section>
+        <div>
+            <!-- Hero Section -->
+            <section id="hero" class="pt-20 w-full flex justify-center relative overflow-hidden">
+
+                <!-- Circles -->
+                <div class="absolute z-0 top-0 left-28 w-60"><img src="./images/ellipse-1.svg"></div>
+                <div class="absolute z-0 top-[50%] w-60 -right-20 rotate-90"><img src="./images/ellipse-1.svg"></div>
+                <div class="absolute z-0 bottom-0 w-28 left-32"><img src="./images/ellipse-2.svg"></div>
+                <div class="absolute z-0 top-32 w-28 right-40 hidden sm:flex"><img src="./images/ellipse-2.svg"></div>
+
+                <!-- Content -->
+                <div class="container p-6 h-[calc(100vh-10rem)] flex justify-center items-center">
+
+                    <div class="flex flex-col sm:gap-2 md:gap-4 text-4xl font-medium sm:text-5xl md:text-6xl lg:text-7xl">
+                        <div>
+                            <span class="selection:text-orange selection:bg-dark-secondary">web</span>
+                            <span class="text-orange select-none">⌫</span>
+                            <span class="text-pink ml-16 select-none">✦</span>
+                        </div>
+                        <div>
+                            <span class="text-green select-none">&</span>
+                            <span class="selection:text-green selection:bg-dark-secondary">app</span>
+                            <span class="selection:text-orange selection:bg-dark-secondary"><span class="text-orange">.</span> development</span>
+                        </div>
+                        <div class="flex flex-col-reverse gap-2 sm:flex-row sm:justify-between">
+                            <span class="font-normal text-base tracking-widest sm:max-w-[20rem] sm:text-xs md:text-sm lg:text-base lg:max-w-sm selection:text-green selection:bg-dark-secondary font-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</span>
+                            <span class="flex gap-2">
+                                <span class="selection:text-pink selection:bg-dark-secondary">agency</span>
+                                <span class="text-pink">}</span>
+                            </span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <!-- Design Methodology -->
+            <section id="design-methodology" class="pt-20 pb-20 w-full flex justify-center relative overflow-hidden">
+
+                <!-- Circles -->
+                <div class="absolute z-0 top-32 w-28 right-32"><img src="./images/ellipse-2.svg"></div>
+
+                <div class="container p-6 min-h-[calc(100vh-10rem)] h-full flex justify-center items-center">
+
+                    <div class="text-center flex flex-col items-center gap-3">
+                        <h2 class="text-4xl text-white font-medium md:text-5xl">Design Methodology</h2>
+                        <p class="tracking-widest max-w-3xl font-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                        <div class="mt-20 flex flex-col xl:flex-row flex-wrap justify-center gap-6">
+
+                            <article class="max-w-[18rem] bg-very-dark flex flex-col items-center relative px-4 py-8 overflow-hidden rounded-b-[33%] rounded-t-2xl">
+                                <div class="w-32 h-8 bg-pink absolute -top-3 -right-8 rotate-45"></div>
+                                <div class="bg-pink rounded-full w-20 h-20 flex justify-center items-center cursor-pointer">
+                                    <img src="./images/logo.svg" alt="logo">
+                                </div>
+                                <h4 class="text-2xl mt-6">Step 01</h4>
+                                <p class="font-light text-sm px-2 mt-4 leading-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                                <button class="mt-8 mb-4 hover:brightness-75">
+                                    <img src="./images/next-icon.svg" alt="->">
+                                </button>
+                            </article>
+                            <div class="my-auto">
+                                <span class="text-6xl text-dark-secondary">✦</span>
+                            </div>
+                            <article class="max-w-[18rem] bg-very-dark flex flex-col items-center relative px-4 py-8 overflow-hidden rounded-b-[33%] rounded-t-2xl">
+                                <div class="w-32 h-8 bg-orange absolute -top-3 -right-8 rotate-45"></div>
+                                <div class="bg-orange rounded-full w-20 h-20 flex justify-center items-center cursor-pointer">
+                                    <img src="./images/logo.svg" alt="logo">
+                                </div>
+                                <h4 class="text-2xl mt-6">Step 02</h4>
+                                <p class="font-light text-sm px-2 mt-4 leading-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                                <button class="mt-8 mb-4 hover:brightness-75">
+                                    <img src="./images/next-icon.svg" alt="->">
+                                </button>
+                            </article>
+                            <div class="my-auto">
+                                <span class="text-6xl text-dark-secondary">✦</span>
+                            </div>
+                            <article class="max-w-[18rem] bg-very-dark flex flex-col items-center relative px-4 py-8 overflow-hidden rounded-b-[33%] rounded-t-2xl">
+                                <div class="w-32 h-8 bg-green absolute -top-3 -right-8 rotate-45"></div>
+                                <div class="bg-green rounded-full w-20 h-20 flex justify-center items-center cursor-pointer">
+                                    <img src="./images/logo.svg" alt="logo">
+                                </div>
+                                <h4 class="text-2xl mt-6">Step 03</h4>
+                                <p class="font-light text-sm px-2 mt-4 leading-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                                <button class="mt-8 mb-4 hover:brightness-75">
+                                    <img src="./images/next-icon.svg" alt="->">
+                                </button>
+                            </article>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- App Services -->
+
+        </div>
     </main>
     <footer></footer>
     <script src="./script.js"></script>
