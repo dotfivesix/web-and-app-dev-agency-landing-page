@@ -17,8 +17,47 @@
 
 @layer components
 {
+    .side-bar
+    {
+        @apply w-[3px] h-6 xl:h-8 2xl:h-12 bg-light;
+    }
+    .section-para
+    {
+        @apply tracking-[0.25em] max-w-3xl font-light lg:text-lg lg:max-w-6xl selection:bg-orange selection:text-white;
+    }
+
     .footer-nav-link
     {
         @apply relative before:absolute before:content-[''] before:w-full before:h-[2px] before:bg-orange before:-bottom-1 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100 hover:text-neutral-300;
+    }
+
+    .horizontal-bar-item
+    {
+        @apply h-12 brightness-0 invert opacity-25;
+    }
+    
+    .section-divider
+    {
+        @apply container p-6 min-h-[calc(100vh-10rem)] h-full flex justify-center items-center flex-col gap-10 xl:flex-row lg:justify-around px-16;
+    }
+    .section-heading
+    {
+        @apply text-4xl text-white font-medium md:text-5xl selection:bg-green selection:text-white;
+    }
+    .section-divided-para
+    {
+        @apply tracking-[0.25em] max-w-3xl font-light xl:max-w-xl lg:text-lg selection:bg-orange selection:text-white;
+    }
+    .section-divided-btn
+    {
+        @apply px-4 py-2 border border-light md:text-lg w-max mx-auto xl:mr-auto xl:ml-0 hover:border-orange hover:text-white duration-100 transition-all;
+    }
+    .desktop-nav-link
+    {
+        @apply relative before:absolute before:w-full before:h-[2px] before:bg-orange before:opacity-0 hover:before:opacity-100 before:transition-all before:duration-150 before:-bottom-2 hover:text-white;
+    }
+    .section-container
+    {
+        @apply pt-20 pb-20 w-full flex justify-center relative overflow-hidden;
     }
 }
