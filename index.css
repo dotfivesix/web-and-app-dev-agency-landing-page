@@ -50,7 +50,7 @@
     }
     .section-divided-btn
     {
-        @apply px-4 py-2 border border-light md:text-lg w-max mx-auto xl:mr-auto xl:ml-0 hover:border-orange hover:text-white duration-100 transition-all;
+        @apply px-4 py-2 border border-light md:text-lg w-max mx-auto xl:mr-auto xl:ml-0 hover:bg-light hover:text-black duration-150 transition-all;
     }
     .desktop-nav-link
     {
@@ -59,5 +59,23 @@
     .section-container
     {
         @apply pt-10 pb-10 md:pt-20 md:pb-20 w-full flex justify-center relative overflow-hidden;
+    }
+
+    /* Card */
+    .card-bar
+    {
+        @apply w-32 h-12 absolute -top-3 -right-12 rotate-45 group-hover:bg-white transition-all duration-300;
+    }
+    .card-image-wrapper
+    {
+        @apply rounded-full w-20 h-20 flex justify-center items-center group-hover:bg-white cursor-pointer transition-all duration-300;
+    }
+    .design-card-container
+    {
+        @apply max-w-[18rem] bg-very-dark flex flex-col items-center relative px-4 py-8 overflow-hidden rounded-b-[40%] rounded-t-2xl transition-all duration-300;
+    }
+    .service-card-container
+    {
+        @apply max-w-[18rem] bg-very-dark flex flex-col items-center relative px-4 py-8 overflow-hidden rounded-2xl transition-all duration-300;
     }
 }
