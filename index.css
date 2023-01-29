@@ -46,7 +46,7 @@
     }
     .section-divided-para
     {
-        @apply tracking-[0.25em] max-w-3xl font-light xl:max-w-xl lg:text-lg selection:bg-orange selection:text-white;
+        @apply tracking-[0.25em] max-w-3xl text-justify sm:text-center xl:text-start font-light xl:max-w-xl lg:text-lg selection:bg-orange selection:text-white;
     }
     .section-divided-btn
     {
@@ -58,6 +58,6 @@
     }
     .section-container
     {
-        @apply pt-20 pb-20 w-full flex justify-center relative overflow-hidden;
+        @apply pt-10 pb-10 md:pt-20 md:pb-20 w-full flex justify-center relative overflow-hidden;
     }
 }
