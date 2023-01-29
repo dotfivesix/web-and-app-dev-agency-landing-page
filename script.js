@@ -86,11 +86,11 @@ sections.forEach((section, index) => {
         if (currentSection != section)
         {
             sidebarProgress.children[sections.indexOf(currentSection)].classList.remove("opacity-100");
-            sidebarProgress.children[sections.indexOf(currentSection)].classList.add("opacity-50");
+            sidebarProgress.children[sections.indexOf(currentSection)].classList.add("opacity-25");
             currentSection = section;
             goBottomAnchor.setAttribute("href", `#${sections[sections.indexOf(currentSection) + 1]}`);
         }
-        sidebarProgress.children[index].classList.remove("opacity-50");
+        sidebarProgress.children[index].classList.remove("opacity-25");
         sidebarProgress.children[index].classList.add("opacity-100");
     });
 });

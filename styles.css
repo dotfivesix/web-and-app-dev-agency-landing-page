@@ -714,6 +714,14 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-28 {
+  margin-top: 7rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .flex {
   display: flex;
 }
@@ -970,6 +978,16 @@ video {
   border-top-right-radius: 1rem;
 }
 
+.rounded-b-\[50\%\] {
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.rounded-b-\[40\%\] {
+  border-bottom-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1099,6 +1117,11 @@ video {
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .pt-20 {
@@ -1316,6 +1339,11 @@ video {
 .before\:bg-\[url\(\'\.\/images\/rectangles\.png\'\)\]::before {
   content: var(--tw-content);
   background-image: url('./images/rectangles.png');
+}
+
+.before\:bg-\[url\(\'\/images\/rectangles\.png\'\)\]::before {
+  content: var(--tw-content);
+  background-image: url('/images/rectangles.png');
 }
 
 .before\:bg-cover::before {
