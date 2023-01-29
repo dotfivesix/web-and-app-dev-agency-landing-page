@@ -14,3 +14,11 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+@layer components
+{
+    .footer-nav-link
+    {
+        @apply relative before:absolute before:content-[''] before:w-full before:h-[2px] before:bg-orange before:-bottom-1 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100 hover:text-neutral-300;
+    }
+}

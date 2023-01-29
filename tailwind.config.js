@@ -16,6 +16,12 @@ module.exports = {
         "light": "#E0E3ED"
       }
     },
+    keyframes: {
+      xscroll : {
+        "0%, 100%": {transform: 'translateX(0)'},
+        "50%": {transform: 'translateX(500px)'},
+      }
+    },
   },
   plugins: [],
 }

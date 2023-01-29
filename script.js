@@ -14,7 +14,8 @@ const sections = [
     "app-name",
     "web-services",
     "web-name",
-    "book-appointment"
+    "book-appointment",
+    "our-team"
 ];
 
 let currentSection = "hero";
