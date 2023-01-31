@@ -95,7 +95,7 @@ sections.forEach((section, index) => {
     });
 });
 
-$("#go-bottom-anchor,#go-up-anchor").on("click", function (e) {
+$("#go-bottom-anchor,#go-up-anchor,#book-appointment-anchor").on("click", function (e) {
     e.preventDefault();
     const href = $(this).attr("href");
     $("html, body").animate({ scrollTop: $(href).offset().top }, 400);
